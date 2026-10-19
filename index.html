@@ -104,7 +104,10 @@
         grid-template-columns: 1fr auto 1fr;
         gap: 14px;
         align-items: end;
+        min-width: 0;
+        max-width: 100%;
       }
+      .picker { min-width: 0; }
       .picker label,
       .moment label {
         display: block;
@@ -118,7 +121,10 @@
       .picker input[type="search"],
       .picker select,
       .moment input {
+        box-sizing: border-box;
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
         min-height: 52px;
         padding: 10px 12px;
         font-size: 16px;
@@ -164,8 +170,21 @@
         gap: 8px 12px;
         margin-top: 20px;
         align-items: end;
+        min-width: 0;
+        max-width: 100%;
       }
-      .moment input { min-width: 0; }
+      .moment input {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
+      .moment input[type="datetime-local"] {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
       .moment label { grid-column: 1 / -1; margin-bottom: 0; }
       .now-btn {
         min-height: 52px;
